@@ -10,7 +10,76 @@
 	<title>Pink</title>
 </head>
 <body>
-	<h1>Заголовок</h1>
+	<header class="main-header main-header--index">
+		<div class="main-header__wrapper">
+			<div class="burger-menu">
+				<div class="burger-menu__wrapper">
+					<a class="logo" href="#">
+						<picture>
+							<source media="(min-width:1200px)" srcset="img/logo-desktop.png">
+							<source media="(min-width:680px)" srcset="img/logo-tablet.png">
+							<img class="logo__image" src="img/logo-mobile.png" alt="Pink" width="75" height="22">
+						</picture>
+					</a>
+					<button class="burger-menu__burger" type="button">
+						<span class="visually-hidden">Меню</span>
+					</button>
+				</div>
+				<ul class="burger-menu__list burger-menu__list--nojs">
+					<li class="burger-menu__list-item">
+						<a class="burger-menu__link" href="#">
+							Главная
+						</a>
+					</li>
+					<li class="burger-menu__list-item">
+						<a class="burger-menu__link" href="#">
+							Фотографии
+						</a>
+					</li>
+					<li class="burger-menu__list-item">
+						<a class="burger-menu__link" href="#">
+							Конкурс
+						</a>
+					</li>
+					<li class="burger-menu__list-item">
+						<a class="burger-menu__link" href="#">
+							HTML Academy
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="index-intro">
+			<div class="index-intro__wrapper">
+				<h2 class="index-intro__header">
+					Взгляните на жизнь иначе!
+				</h2>
+				<a class="button index-intro__button" href="#">
+					Скачать приложение
+				</a>
+				<ul class="index-intro__app-list">
+					<li class="index-intro__app">
+						<a class="index-intro__link index-intro__link--apple" href="#">
+							<span class="visually-hidden">iOS</span>
+						</a>
+					</li>
+					<li class="index-intro__app">
+						<a class="index-intro__link index-intro__link--android" href="#">
+							<span class="visually-hidden">Android</span>
+						</a>
+					</li>
+					<li class="index-intro__app">
+						<a class="index-intro__link index-intro__link--microsoft" href="#">
+							<span class="visually-hidden">Windows</span>
+						</a>
+					</li>
+				</ul>
+				<p class="index-intro__description">
+					Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+				</p>
+			</div>
+		</div>
+	</header>
 <script src="js/script.js"></script>
 </body>
 </html>
