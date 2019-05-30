@@ -1,5 +1,5 @@
 body {
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
@@ -46,18 +46,25 @@ img {
   overflow: hidden;
 }
 .button {
+  display: block;
   box-sizing: border-box;
-  display: inline-block;
   padding: 15px 20px;
-  width: 100%;
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
-  color: #ffffff;
   text-decoration: none;
   text-align: center;
+}
+.button--download {
+  color: #ffffff;
   border: 3px solid #ffffff;
   border-radius: 30px;
+}
+@media (min-width: 1200px) {
+  .button--download {
+    font-size: 21px;
+    line-height: 21px;
+  }
 }
 .logo {
   display: block;
@@ -215,7 +222,7 @@ img {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 0;
   width: 205px;
   list-style: none;
@@ -268,7 +275,6 @@ img {
   .index-intro {
     box-sizing: border-box;
     padding-top: 0;
-    padding-right: 50%;
     padding-bottom: 0;
     position: absolute;
     top: 50%;
@@ -277,18 +283,21 @@ img {
     background-color: transparent;
   }
   .index-intro__wrapper {
-    width: 300px;
+    width: 310px;
   }
   .index-intro__header {
     display: block;
+    margin: 0;
     margin-right: auto;
+    margin-bottom: 30px;
     margin-left: auto;
+    padding: 0;
+    width: 200px;
     font-size: 40px;
     line-height: 50px;
     color: #ffffff;
     font-weight: lighter;
     text-align: center;
-    width: 200px;
   }
   .index-intro__description {
     margin: 0 auto;
@@ -301,7 +310,7 @@ img {
     background-size: cover;
   }
   .main-header--index .main-header__wrapper {
-    min-height: 850px;
+    min-height: 800px;
     background-image: url(../img/iphone-desktop.png);
     background-size: 500px;
     background-position: 80% 100%;
@@ -358,6 +367,24 @@ img {
     background-color: #ffffff;
   }
   .index-intro {
+    padding-right: 130px;
     padding-left: 130px;
+    top: 60%;
+  }
+  .index-intro__header {
+    margin-bottom: 60px;
+    width: 90%;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .index-intro__button {
+    margin-bottom: 60px;
+  }
+  .index-intro__app-list {
+    margin-bottom: 60px;
+  }
+  .index-intro__description {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
