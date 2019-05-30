@@ -1,10 +1,10 @@
 let burgerMenu = document.querySelector('.burger-menu');
-let mainMenuList = document.querySelector('.burger-menu__list');
+let mainNav = document.querySelector('.burger-menu__navigation');
 let burgerBtn = document.querySelector('.burger-menu__burger');
 
 function  mainMenuListNoJS() {
-	if (mainMenuList.classList.contains('burger-menu__list--nojs')) {
-		mainMenuList.classList.remove('burger-menu__list--nojs')
+	if (mainNav.classList.contains('burger-menu__navigation--nojs')) {
+		mainNav.classList.remove('burger-menu__navigation--nojs')
 	}
 }
 
@@ -15,7 +15,7 @@ burgerBtn.addEventListener('click', function() {
 
 function toggleMenu() {
 	burgerBtn.classList.toggle('burger-menu__burger--active');
-	mainMenuList.classList.toggle('burger-menu__list--active');
+	mainNav.classList.toggle('burger-menu__navigation--active');
 	burgerMenu.classList.toggle('burger-menu--active');
 }
 
