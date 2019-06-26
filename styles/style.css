@@ -386,41 +386,25 @@ img {
   margin-bottom: 0;
 }
 .section-features__content {
-  position: relative;
+  padding-top: 85px;
   background-color: #f2f2f2;
 }
-.section-features__content:before {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  background-color: #ffffff;
-  border: 35px solid #f2f2f2;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-width: 100vw;
-  border-bottom-width: 0;
-}
-.section-features__list-wrapper {
-  padding-top: 85px;
-  padding-bottom: 350px;
-  background-image: url(../img/feature-iphone-mobile.png);
-  background-repeat: no-repeat;
-  background-size: 65%;
-  background-position: 50% 110%;
-}
-.section-features__features-list {
+.section-features__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.section-features__feature {
-  margin-bottom: 40px;
+.section-features__list-item {
+  margin-bottom: 35px;
 }
-.section-features__feature:last-child {
+.section-features__list-item:last-child {
   margin-bottom: 0;
+  padding-bottom: 350px;
+  background-image: url(../img/feature-iphone-mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
-.section-features__feature-header {
+.section-features__feature-title {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -438,17 +422,6 @@ img {
   .section-features {
     position: relative;
   }
-  .section-features:before {
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: 0;
-    border: 50px solid blue;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-width: 100vw;
-    border-bottom-width: 0;
-  }
   .section-features__headers {
     padding-top: 55px;
     padding-bottom: 55px;
@@ -462,26 +435,28 @@ img {
     margin: 0 auto;
     width: 80%;
   }
-  .section-features__content:before {
-    border: 50px solid lightgreen;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-width: 100vw;
-    border-bottom-width: 0;
+  .section-features__content {
+    padding-top: 0;
   }
-  .section-features__list-wrapper {
-    padding-top: 70px;
-    padding-bottom: 45px;
+  .section-features__lists-wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    padding-bottom: 40px;
     background-image: url(../img/feature-iphone-tablet.png);
-    background-position: 0% 0%;
-    background-size: 50%;
-    z-index: 99;
+    background-repeat: no-repeat;
+    background-position: top left;
   }
-  .section-features__features-list {
-    width: 40%;
-    margin-left: auto;
+  .section-features__list {
+    width: 50%;
   }
-  .section-features__feature-header {
+  .section-features__list-item:last-child {
+    padding-bottom: 0;
+    background-image: none;
+  }
+  .section-features__feature-title {
     text-align: left;
   }
   .section-features__feature-description {
@@ -500,35 +475,38 @@ img {
   .section-features__header:last-child {
     width: 60%;
   }
-  .section-features__list-wrapper {
-    padding-top: 70px;
-    padding-bottom: 45px;
+  .section-features__content {
+    padding-bottom: 60px;
+  }
+  .section-features__lists-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
     background-image: none;
   }
-  .section-features__features-list {
+  .section-features__list {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-  .section-features__feature {
+  .section-features__list-item {
     margin-bottom: 0;
-    padding-top: 355px;
-    width: 240px;
+    padding-top: 360px;
+    width: 30%;
     background-repeat: no-repeat;
-    background-position: center top;
   }
-  .section-features__feature--fun {
+  .section-features__list-item:first-child {
     background-image: url(../img/feature-iphone-desktop--fun.png);
   }
-  .section-features__feature--world {
+  .section-features__list-item:nth-child(2) {
     background-image: url(../img/feature-iphone-desktop--world.png);
   }
-  .section-features__feature--friends {
+  .section-features__list-item:last-child {
+    background-position: top;
     background-image: url(../img/feature-iphone-desktop--friends.png);
   }
-  .section-features__feature-header {
+  .section-features__feature-title {
     font-size: 30px;
     line-height: 40px;
     text-align: center;
