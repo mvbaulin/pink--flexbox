@@ -482,28 +482,53 @@ img {
 }
 
 .section-features__content {
+	position: relative;
 	padding-top: 85px;
 	background-color: @color-grey;
+	overflow: hidden;
+	&:after {
+		position: absolute;
+		box-sizing: border-box;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 30px solid @color-white;
+		border-right: 100vw solid transparent;
+		border-bottom-width: 0;
+		border-left-width: 0;
+	}
 }
 
 .section-features__lists-wrapper {
-
+	position: relative;
+	padding-bottom: 320px;
+	&:after {
+		position: absolute;
+		content: "";
+		width: 155px;
+		height: 276px;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		background-image: url(../img/feature-iphone-mobile.png);
+		background-repeat: no-repeat;
+		background-position: top;
+	}
 }
 
 .section-features__list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	
 }
 
 .section-features__list-item {
 	margin-bottom: 35px;
 	&:last-child {
 		margin-bottom: 0;
-		padding-bottom: 350px;
-		background-image: url(../img/feature-iphone-mobile.png);
-		background-repeat: no-repeat;
-		background-position: bottom;
 	}
 }
 
@@ -545,29 +570,34 @@ img {
 
 	.section-features__content {
 		padding-top: 0;
+		&:after {
+			border-top-width: 50px;
+		}
 	}
 
 	.section-features__lists-wrapper {
+		position: relative;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		justify-content: flex-end;
 		padding-top: 50px;
 		padding-bottom: 40px;
-		background-image: url(../img/feature-iphone-tablet.png);
-		background-repeat: no-repeat;
-		background-position: top left;
+		&:after {
+			width: 265px;
+			height: 480px;
+			left: 0;
+			top: 0;
+			transform: none;
+			background-image: url(../img/feature-iphone-tablet.png);
+			background-position: top left;
+			z-index: 30;
+		}
 	}
 
 	.section-features__list {
+		padding-bottom: 0;
 		width: 50%;
-	}
-
-	.section-features__list-item {
-		&:last-child {
-			padding-bottom: 0;
-			background-image: none;
-		}
 	}
 
 	.section-features__feature-title {
@@ -594,13 +624,18 @@ img {
 	}
 
 	.section-features__content {
-		padding-bottom: 60px;
+		&:after {
+			border-top-width: 90px;
+		}
 	}
 
 	.section-features__lists-wrapper {
 		padding-top: 0;
 		padding-bottom: 0;
 		background-image: none;
+		&:after {
+			display: none;
+		}
 	}
 
 	.section-features__list {
@@ -616,6 +651,7 @@ img {
 		padding-top: 360px;
 		width: 30%;
 		background-repeat: no-repeat;
+		z-index: 30;
 		&:first-child {
 			background-image: url(../img/feature-iphone-desktop--fun.png);
 		}
@@ -636,5 +672,99 @@ img {
 
 	.section-features__feature-description {
 		text-align: center;
+	}
+}
+
+/*  SECTION-EFFECT*/
+
+.section-effect {
+	display: none;
+}
+
+@media (min-width: @width-tablet) {
+	.section-effect {
+		display: block;
+	}
+	
+	.section-effect__wrapper {
+		position: relative;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: flex-end;
+		&:after {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 0;
+			width: 238px;
+			height: 276px;
+			transform: translateY(-50%);
+			background-image: url(../img/alarm-tablet.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+		}
+	}
+	
+	.section-effect__content {
+		padding-top: 50px;
+		padding-bottom: 120px;
+		width: 50%;
+	}
+	
+	.section-effect__title {
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0;
+		width: 60%;
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	.section-effect__description {
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0;
+		color: @color-blue;
+	}
+
+	.section-effect__link {
+		color: @color-pink;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.section-effect {
+		background-color: @color-grey;
+		padding-top: 0;	
+	}
+	
+	.section-effect__wrapper {
+		&:after {
+			width: 298px;
+			height: 345px;
+			background-image: url(../img/alarm-desktop.png);
+		}
+	}
+	
+	.section-effect__content {
+		padding-top: 150px;
+		padding-bottom: 115px;
+		width: 63%;
+	}
+	
+	.section-effect__title {
+		width: auto;
+	}
+	
+	.section-effect__description {
+		font-size: 18px;
+		line-height: 30px;
+	}
+	
+	.section-effect__link  {
+		font-size: 18px;
+		line-height: 30px;
 	}
 }
