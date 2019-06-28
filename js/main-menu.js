@@ -19,11 +19,4 @@ function toggleMenu() {
 	burgerMenu.classList.toggle('burger-menu--active');
 }
 
-
-
-
-
-
-
-
 mainMenuListNoJS();
