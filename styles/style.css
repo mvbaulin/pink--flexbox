@@ -686,8 +686,21 @@ img {
 .comment-slider {
   overflow: hidden;
 }
-.comment-slider--nojs .comment-slider__page {
+.comment-slider--nojs .comment-slider__pages {
   display: block;
+  width: 100%;
+}
+.comment-slider--nojs .comment-slider__page {
+  margin-bottom: 20px;
+}
+.comment-slider--nojs .comment-slider__page:last-child {
+  margin-bottom: 0;
+}
+.comment-slider--nojs .comment-slider__control-bar {
+  display: none;
+}
+.comment-slider--nojs .comment-slider__navigation {
+  display: none;
 }
 .comment-slider__pages {
   display: -webkit-flex;
