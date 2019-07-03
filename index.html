@@ -16,9 +16,9 @@
 				<div class="burger-menu__wrapper">
 					<a class="logo" href="#">
 						<picture>
-							<source media="(min-width:1200px)" srcset="img/logo-desktop.png">
-							<source media="(min-width:680px)" srcset="img/logo-tablet.png">
-							<img class="logo__image" src="img/logo-mobile.png" alt="Pink" width="75" height="22">
+							<source media="(min-width:1200px)" srcset="img/logo-desktop.svg">
+							<source media="(min-width:680px)" srcset="img/logo-tablet.svg">
+							<img class="logo__image" src="img/logo-mobile.svg" alt="Pink" width="75" height="22">
 						</picture>
 					</a>
 					<button class="burger-menu__burger" type="button">
@@ -97,10 +97,10 @@
 			<div class="container">
 				<div class="section-features__wrapper">
 					<div class="section-features__headers">
-						<h3 class="section-features__header">
+						<h3 class="section-header section-features__header">
 							Устали от серости мегаполиса?
 						</h3>
-						<h3 class="section-features__header">
+						<h3 class="section-header section-features__header">
 							Нам есть, что вам предложить!
 						</h3>
 					</div>
@@ -286,7 +286,87 @@
 				</div>
 			</div>
 		</section>
+		<section class="section-contacts">
+			<div class="container">
+				<div class="section-contacts__wrapper">
+					<h2 class="section-header section-contacts__title">
+						Остались вопросы?<br> Свяжитесь с нами!
+					</h2>
+					<ul class="section-contacts__way-list">
+						<li class="section-contacts__way">
+							<h4 class="section-contacts__where">
+								Звоните
+							</h4>
+							<a class="section-contacts__link" href="tel:78125556666">
+								+7(812)555-66-66
+							</a>
+						</li>
+						<li class="section-contacts__way">
+							<h4 class="section-contacts__where">
+								Пишите
+							</h4>
+							<a class="section-contacts__link" href="mailto:mail@htmlacademy.ru">
+								mail@htmlacademy.ru
+							</a>
+						</li>
+						<li class="section-contacts__way">
+							<h4 class="section-contacts__where">
+								Приезжайте в гости
+							</h4>
+							<a class="section-contacts__link" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.325111%2C59.938750&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323057%252C59.938633%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8%2520&z=16.4">
+								ул. Большая Конюшенная, 19/8
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="section-map">
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af4a97e4d0b1528b1179448dc07ea7a157a22b095a41ad7a30873c7a655f2695b&amp;source=constructor" width="100%" height="210" frameborder="0"></iframe>
+		</section>
 	</main>
+	<footer class="main-footer">
+		<div class="container">
+			<div class="main-footer__wrapper">
+				<a class="footer__logo" href="#">
+					<picture>
+						<source srcset="img/footer-logo-desktop.svg" media="(min-width:940px)">
+						<source srcset="img/footer-logo-tablet.svg" media="(min-width:620px)">
+						<img class="footer__logo-image" src="img/footer-logo-mobile.svg" alt="Pink">
+					</picture>
+				</a>
+				<ul class="main-footer__social-list">
+					<li class="main-footer__social">
+						<a class="main-footer__social-link main-footer__social-link--twitter" href="#">
+							<span class="visually-hidden">
+								Twitter
+							</span>
+						</a>
+					</li>
+					<li class="main-footer__social">
+						<a class="main-footer__social-link main-footer__social-link--facebook" href="#">
+							<span class="visually-hidden">
+								FaceBook
+							</span>
+						</a>
+					</li>
+					<li class="main-footer__social">
+						<a class="main-footer__social-link main-footer__social-link--youtube" href="#">
+							<span class="visually-hidden">
+								YouTube
+							</span>
+						</a>
+					</li>
+				</ul>
+				<a class="main-footer__developed" href="http://htmlacademy.ru">
+					Разработанно
+					<span class="visually-hidden">
+						HTML Academy
+					</span>
+				</a>
+			</div>
+		</div>
+	</footer>
 <script src="js/main-menu.js"></script>
 <script src="js/comment-slider.js"></script>
 <script src="js/table-price.js"></script>
