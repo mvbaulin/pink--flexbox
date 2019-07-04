@@ -8,8 +8,6 @@ function priceTableNoJs () {
 	}
 }
 
-console.log(priceTableNeedWidthToScroll);
-
 let priceTableCurrentPostion = 0;
 let priceTableCurrentDot = 0;
 
@@ -24,21 +22,5 @@ for (let i = 0; i < priceTableDots.length; i++) {
 		})
 	});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 priceTableNoJs();

@@ -10,7 +10,6 @@ function  mainMenuListNoJS() {
 	}
 }
 
-
 burgerBtn.addEventListener('click', function() {
 	toggleMenu();
 })
