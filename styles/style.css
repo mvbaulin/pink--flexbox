@@ -30,8 +30,8 @@ img {
 }
 @media (min-width: 1200px) {
   .container {
-    padding: 0 130px;
-    max-width: 940px;
+    padding: 0 10px;
+    max-width: 880px;
   }
 }
 .visually-hidden {
@@ -118,7 +118,7 @@ img {
     background-position: bottom 263px left, top;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .burger-menu {
     position: relative;
     background-color: rgba(0, 0, 0, 0.4);
@@ -262,7 +262,7 @@ img {
 .index-intro__link {
   display: block;
   background-repeat: no-repeat;
-  background-size: 100;
+  background-size: 100%;
 }
 .index-intro__link--apple {
   width: 47px;
@@ -387,6 +387,7 @@ img {
   .burger-menu__navigation {
     margin-left: 130px;
     flex-grow: 1;
+    display: block;
   }
   .burger-menu__burger {
     display: none;
@@ -463,6 +464,24 @@ img {
     background-repeat: no-repeat, no-repeat;
     background-size: auto 76%, auto 100%;
     background-position: bottom center, center top;
+  }
+}
+@media (min-width: 1920px) {
+  .main-header {
+    background-image: url(../img/header-background-desktop@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 160%;
+    background-position: center top 100px;
+  }
+  .main-header--index {
+    background: url(../img/header-iphone-desktop@2x.png), url(../img/header-background-desktop@2x.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 76%, cover;
+    background-position: bottom center, center top;
+  }
+  .burger-menu__navigation {
+    margin: 0 auto;
+    max-width: 1382px;
   }
 }
 /*  TRIANGLED*/
@@ -1473,4 +1492,39 @@ img {
     padding-top: 65px;
     padding-bottom: 65px;
   }
+}
+/*  PAGE-FORM*/
+/* SECTION-INTRO */
+.section-intro__wrapper {
+  padding-top: 50px;
+  padding-bottom: 45px;
+}
+.section-intro__text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+@media (min-width: 680px) {
+  .section-intro__wrapper {
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+  .section-intro__text {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-intro__wrapper {
+    padding-top: 95px;
+  }
+}
+/* SECTION-FORM */
+.section-form__fieldset {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+.section-form__legend {
+  margin: 0 auto;
 }

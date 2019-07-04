@@ -24,3 +24,18 @@ for (let i = 0; i < priceTableDots.length; i++) {
 }
 
 priceTableNoJs();
+
+window.addEventListener('resize', function() {
+	priceTableDefault();
+})
+
+function priceTableDefault() {
+	if (window.innerWidth > 680) {
+		priceTable.style.transform = 'translateX(0)';
+		priceTableDots.forEach(function(item, index) {
+			item.classList.remove('slider-dot--active');
+		})
+		priceTableDots[0].classList.add('slider-dot--active');
+	}
+}
+

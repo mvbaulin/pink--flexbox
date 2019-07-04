@@ -23,7 +23,7 @@
 					</a>
 					<button class="burger-menu__burger" type="button">
 						<span class="visually-hidden">
-							Меню
+							Открыть меню
 						</span>
 					</button>
 				</div>
@@ -34,18 +34,18 @@
 								Главная
 							</a>
 						</li>
-						<li class="burger-menu__list-item burger-menu__list-item--active">
-							<a class="burger-menu__link">
+						<li class="burger-menu__list-item">
+							<a class="burger-menu__link" href="photo.html">
 								Фотографии
 							</a>
 						</li>
-						<li class="burger-menu__list-item">
-							<a class="burger-menu__link" href="form.html">
+						<li class="burger-menu__list-item burger-menu__list-item--active">
+							<a class="burger-menu__link">
 								Конкурс
 							</a>
 						</li>
 						<li class="burger-menu__list-item">
-							<a class="burger-menu__link" href="http://htmlacademy.ru">
+							<a class="burger-menu__link" href="http://htmlacademy.ru" target="_blank">
 								HTML Academy
 							</a>
 						</li>
@@ -62,7 +62,29 @@
 		</div>
 	</header>
 	<main>
-		
+		<section class="section-intro">
+			<div class="container">
+				<div class="section-intro__wrapper">
+					<p class="section-intro__text">
+						Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="section-form">
+			<div class="section-form__wrapper">
+				<form class="section-form__form" action="#">
+					<fieldset class="section-form__fieldset">
+						<legend class="section-form__legend section-form__legend--hidden">
+							Пользователь
+						</legend>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quidem, veniam rem eum necessitatibus qui ducimus doloremque fugit, pariatur amet tenetur repellat sapiente debitis odit quae dignissimos eligendi incidunt, autem vitae id? Ipsam consequatur rerum voluptatibus adipisci saepe totam sapiente reprehenderit, eveniet illo dolores, unde fuga, aliquam laborum iusto maxime!
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</section>
 	</main>
 	<footer class="main-footer main-footer--indexxxx">
 		<div class="container">
@@ -97,7 +119,7 @@
 						</a>
 					</li>
 				</ul>
-				<a class="main-footer__developed" href="http://htmlacademy.ru">
+				<a class="main-footer__developed" href="http://htmlacademy.ru" target="_blank">
 					Разработанно
 					<span class="visually-hidden">
 						HTML Academy
