@@ -34,7 +34,7 @@ img {
 
 // *:focus {
 // 	outline: none;
-// 	box-shadow: 0px 0px 0px 5px @color-pink;
+// 	box-shadow: 0px 0px 0px 7px @color-pink;
 // }
 
 .container {
@@ -83,10 +83,18 @@ img {
 	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
+	transition: 0.5s;
 	&--download {
 		color: @color-white;
 		border: 3px solid @color-white;
 		border-radius: 30px;
+		&:hover {
+			color: @color-pink;
+			background-color: @color-white;
+		}
+		&:active {
+			color: @color-transpink;
+		}
 	}
 }
 
@@ -105,12 +113,6 @@ img {
 	display: block;
 	width: 75px;
 	height: 22px;
-}
-
-.logo__image {
-	&:hover {
-		
-	}
 }
 
 @media (min-width: @width-tablet) {
@@ -181,6 +183,7 @@ img {
 			background-color: @color-white;
 			box-shadow: 0px 11px 0px 0px @color-white,
 			0px -11px 0px 0px @color-white;
+			transition: 0.5s;
 		}
 		&:hover {
 			&:before {
@@ -451,6 +454,7 @@ img {
 		padding-bottom: 5px;
 		color: @color-white;
 		text-decoration: none;
+		transition: 0.5s;
 		&:hover {
 			color: @color-pink;
 		}
@@ -852,6 +856,13 @@ img {
 
 	.section-effect__link {
 		color: @color-pink;
+		transition: 0.5s;
+		&:hover {
+			color: @color-blue;
+		}
+		&:active {
+			color: @color-transblue;
+		}
 	}
 }
 
@@ -921,11 +932,16 @@ img {
 	border: none;
 	border-radius: 50%;
 	cursor: pointer;
+	transition: 0.5s; 
 	&--active {
 		background-color: @color-white;
 		box-shadow: 0px 0px 0px 3px @color-darkblue;
 	}
+	&:hover {
+		background-color: @color-blue;
+	}
 	&:focus {
+		background-color: @color-grey;
 		outline: none;
 	}
 }
@@ -942,7 +958,13 @@ img {
 	border-top: 2px solid #c6cace;
 	border-left: 2px solid #c6cace;
 	cursor: pointer;
+	transition: 0.5s;
+	&:hover {
+		border-top: 2px solid @color-blue;
+		border-left: 2px solid @color-blue;
+	}
 	&:focus {
+		opacity: 0.3;
 		outline: none;
 	}
 	&--prev {
@@ -1075,10 +1097,23 @@ img {
 @media (min-width: @width-desktop) {
 	.comment-slider {
 		position: relative;	
+		padding-top: 120px;
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 79px;
+			height: 63px;
+			background-image: url(../img/icons/quotes.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	}
 	
 	.comment-slider__page {
-		padding-top: 110px;	
+		
 	}
 	.comment-slider__user-name {
 		font-size: 24px;
@@ -1376,6 +1411,14 @@ img {
 	font-weight: 300;
 	text-decoration: none;
 	text-align: center;
+	transition: 0.5s;
+	&:hover {
+		color: @color-blue;
+		text-decoration: underline;
+	}
+	&:focus {
+		color: @color-transblue;
+	}
 }
 
 @media (min-width: @width-tablet) {
@@ -1501,13 +1544,18 @@ img {
 }
 
 /* MAIN-FOOTER */
+.main-footer {
+	&--index {
+		display: none;
+	}
+}
 
 .main-footer__wrapper {
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
 
-.footer__logo {
+.main-footer__logo {
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 35px;
@@ -1515,10 +1563,6 @@ img {
 	height: 40px;
 	font-size: 0;
 	line-height: 0;
-}
-
-.footer__logo-image {
-
 }
 
 .main-footer__social-list {
@@ -1533,18 +1577,15 @@ img {
 	list-style: none;
 }
 
-.main-footer__social {
+.main-footer__social-link {
 	position: relative;
+	display: block;
 	box-sizing: border-box;
 	width: 45px;
 	height: 45px;
 	border: 3px solid #e9ebec;
 	border-radius: 50%;
-	
-}
-
-.main-footer__social-link {
-	display: block;
+	transition: 0.5s;
 	&:after {
 		position: absolute;
 		content: "";
@@ -1552,6 +1593,12 @@ img {
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
 		background-repeat: no-repeat;
+	}
+	&:hover {
+		border: 3px solid @color-blue;
+	}
+	&:active {
+		opacity: 0.3;
 	}
 	&--twitter {
 		&:after {
@@ -1597,6 +1644,53 @@ img {
 		width: 27px;
 		height: 34px;
 		background-image: url(../img/icons/htmlacademy-logo.svg);
+	}
+	&:hover {
+		&:after {
+			background-image: url(../img/icons/htmlacademy-logo--hover.svg);
+		}
+	}
+	&:active {
+		&:after {
+			opacity: 0.3;
+		}
+	}
+}
+
+@media (min-width: @width-tablet) {
+	.main-footer {
+		&--index {
+			display: block;
+		}
+	}
+	
+	.main-footer__wrapper {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+	
+	.main-footer__logo {
+		margin: 0;
+	}
+	
+	.main-footer__social-list {
+		margin: 0;
+	}
+	
+	.main-footer__developed {
+		margin: 0;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.main-footer__wrapper {
+		padding-top: 65px;
+		padding-bottom: 65px;
 	}
 }
 
