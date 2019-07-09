@@ -75,7 +75,7 @@
 			<div class="section-form__wrapper">
 				<form class="section-form__form" action="#">
 					<fieldset class="section-form__fieldset section-form__fieldset--user">
-						<legend class="section-form__legend section-form__legend--hidden">
+						<legend class="section-form__legend visually-hidden">
 							Ваши данные
 						</legend>
 						<label class="section-form__label" for="last-name">
@@ -146,7 +146,7 @@
 					</fieldset>
 					<fieldset class="section-form__fieldset section-form__fieldset--contacts">
 						<legend class="section-form__legend section-form__legend--hidden">
-							Как с вами связаться?
+							Контактная информация
 						</legend>
 						<label class="section-form__label" for="phone">
 							<span class="section-form__label-text">
@@ -187,16 +187,16 @@
 						</legend>
 						<textarea class="section-form__textarea" name="message" rows="8" cols="80" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
 					</fieldset>
-					<fieldset class="section-form__fieldset section-form__fieldset--nolegend section-form__fieldset--send">
-						<legend class="section-form__legend section-form__legend--hidden">
+					<div class="section-form__fieldset  section-form__fieldset--send">
+						<h4 class="section-form__legend visually-hidden">
 							Подтвердите отправку сообщения
-						</legend>
+						</h4>
 						<input class="button button--green section-form__button" type="submit" value="Отправить форму">
 						<span class="section-form__warning">
 							<span class="section-form__star">*</span> 
 							— обязательные поля
 						</span>
-					</fieldset>
+					</div>
 				</form>
 			</div>
 		</section>

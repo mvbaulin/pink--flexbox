@@ -2013,9 +2013,6 @@ img {
 		padding-top: 70px;
 		padding-bottom: 50px;
 	}
-	&--send {
-		
-	}
 }
 
 .section-form__legend {
@@ -2096,11 +2093,131 @@ img {
 }
 
 .section-form__warning {
-	display: block;
 	text-transform: uppercase;
 	text-align: center;
 }
 
 .section-form__star {
 	color: @color-pink;
+}
+
+@media (min-width: @width-tablet) {
+	.section-form {
+	
+	}
+	
+	.section-form__wrapper {
+	
+	}
+	
+	.section-form__form {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	
+	.section-form__fieldset {
+		box-sizing: border-box;
+		margin-bottom: 50px;
+		padding: 0;
+		padding-top: 40px;
+		padding-right: 60px;
+		padding-bottom: 30px;
+		padding-left: 60px;
+		border: 2px solid #e5e5e5;
+		&--grey {
+			background-color: transparent;
+		}
+		&--user {
+			padding: 0;
+			border: none;
+			order: 1;
+		}
+		&--achievments {
+			order: 4;
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+		&--contacts {
+			padding-top: 35px;
+			padding-bottom: 35px;
+			order: 3;
+			.section-form__label {
+				flex-direction: column-reverse;
+				justify-content: flex-start;
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			.section-form__label-text {
+				margin: 0;
+				margin-top: 10px;
+				margin-left: 18px;
+				width: 100%;
+			}
+		}
+		&--app {
+			padding-top: 55px;
+			padding-bottom: 65px;
+			order: 2;
+		}
+		&--message {
+			padding-top: 40px;
+			padding-bottom: 50px;
+			order: 5;
+		}
+		&--send {
+			justify-content: space-between;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 0;
+			padding: 0;
+			order: 6;
+			border: none;
+		}
+	}
+	
+	.section-form__legend {
+		margin: 0 auto;
+		position: static;
+		display: block;
+		width: auto;
+		transform: translateX(0);
+		text-align: center;
+		&--hidden {
+			display: block;
+		}
+	}
+	
+	.section-form__label {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+	
+	.section-form__label-text {
+		margin-right: 20px;
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+	
+	.section-form__button {
+		margin: 0;
+		width: 300px;
+	}
+	
+	.section-form__warning {
+		display: block;
+		width: 200px;
+	}
+	
+	.section-form__star {
+		color: @color-pink;
+	}
 }
