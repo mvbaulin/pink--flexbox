@@ -74,19 +74,134 @@
 		<section class="section-form">
 			<div class="section-form__wrapper">
 				<form class="section-form__form" action="#">
-					<fieldset class="section-form__fieldset">
+					<fieldset class="section-form__fieldset section-form__fieldset--user">
 						<legend class="section-form__legend section-form__legend--hidden">
-							Пользователь
+							Ваши данные
 						</legend>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quidem, veniam rem eum necessitatibus qui ducimus doloremque fugit, pariatur amet tenetur repellat sapiente debitis odit quae dignissimos eligendi incidunt, autem vitae id? Ipsam consequatur rerum voluptatibus adipisci saepe totam sapiente reprehenderit, eveniet illo dolores, unde fuga, aliquam laborum iusto maxime!
-						</p>
+						<label class="section-form__label" for="last-name">
+							<span class="section-form__label-text">
+								Фамилия:
+							</span>
+							<input class="section-form__input-text" id="last-name" name="last-name" type="text" placeholder="Укажите фамилию *" required>
+						</label>
+						<label class="section-form__label" for="name">
+							<span class="section-form__label-text">
+								Имя:
+							</span>
+							<input class="section-form__input-text" id="name" name="name" type="text" placeholder="Введите ваше имя *" required>
+						</label>
+						<label class="section-form__label" for="patronymic">
+							<span class="section-form__label-text">
+								Отчество:
+							</span>
+							<input class="section-form__input-text" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+						</label>
+					</fieldset>
+					<fieldset class="section-form__fieldset section-form__fieldset--achievments section-form__fieldset--grey">
+						<legend class="section-form__legend">
+							Ваши безбашенные достижения в путешествии
+						</legend>
+						<label class="checkbox section-form__checkbox">
+							<span class="checkbox__text">
+								Сделал селфи с акулой
+							</span>
+							<input class="checkbox__input" id="shark" name="achievments" type="checkbox">
+							<span class="checkbox__custom-checkbox"></span>
+						</label>
+						<label class="checkbox section-form__checkbox">
+							<span class="checkbox__text">
+								Обгорел на пляже
+							</span>
+							<input class="checkbox__input" id="beach" name="achievments" type="checkbox" checked>
+							<span class="checkbox__custom-checkbox"></span>
+						</label>
+						<label class="checkbox section-form__checkbox">
+							<span class="checkbox__text">
+								Видел Чака Норриса
+							</span>
+							<input class="checkbox__input" id="norris" name="achievments" type="checkbox" disabled>
+							<span class="checkbox__custom-checkbox"></span>
+						</label>
+						<label class="checkbox section-form__checkbox">
+							<span class="checkbox__text">
+								Накупил сувениров
+							</span>
+							<input class="checkbox__input" id="souvenirs" name="achievments" type="checkbox" checked disabled>
+							<span class="checkbox__custom-checkbox"></span>
+						</label>
+						<label class="checkbox section-form__checkbox">
+							<span class="checkbox__text">
+								Удержал башню
+							</span>
+							<input class="checkbox__input" id="tower" name="achievments" type="checkbox">
+							<span class="checkbox__custom-checkbox"></span>
+						</label>
+						<label class="checkbox section-form__checkbox">
+							<span class="checkbox__text">
+								Разгромил отель
+							</span>
+							<input class="checkbox__input" id="hotel" name="achievments" type="checkbox">
+							<span class="checkbox__custom-checkbox"></span>
+						</label>
+					</fieldset>
+					<fieldset class="section-form__fieldset section-form__fieldset--contacts">
+						<legend class="section-form__legend section-form__legend--hidden">
+							Как с вами связаться?
+						</legend>
+						<label class="section-form__label" for="phone">
+							<span class="section-form__label-text">
+								Номер телефона
+							</span>
+							<input class="section-form__input-text" id="phone" name="phone" type="tel" placeholder="Номер пожалуйста">
+						</label>
+						<label class="section-form__label" for="email">
+							<span class="section-form__label-text">
+								Адрес почты
+							</span>
+							<input class="section-form__input-text" id="email" name="email" type="email" placeholder="Введите почту *" required>
+						</label>
+					</fieldset>
+					<fieldset class="section-form__fieldset section-form__fieldset--app section-form__fieldset--grey">
+						<legend class="section-form__legend">
+							С каким приложением путешествовали?
+						</legend>
+						<label class="radio section-form__radio">
+							<span class="radio__text">Pink для iOS</span>
+							<input class="radio__input" type="radio" name="app" id="ios" checked>
+							<span class="radio__custom-radio"></span>
+						</label>
+						<label class="radio section-form__radio">
+							<span class="radio__text">Pink для Android</span>
+							<input class="radio__input" type="radio" name="app" id="android">
+							<span class="radio__custom-radio"></span>
+						</label>
+						<label class="radio section-form__radio">
+							<span class="radio__text">Windows Phone</span>
+							<input class="radio__input" type="radio" name="app" id="windows-phone">
+							<span class="radio__custom-radio"></span>
+						</label>
+					</fieldset>
+					<fieldset class="section-form__fieldset section-form__fieldset--message">
+						<legend class="section-form__legend">
+							Опишите свои эмоции
+						</legend>
+						<textarea class="section-form__textarea" name="message" rows="8" cols="80" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+					</fieldset>
+					<fieldset class="section-form__fieldset section-form__fieldset--nolegend section-form__fieldset--send">
+						<legend class="section-form__legend section-form__legend--hidden">
+							Подтвердите отправку сообщения
+						</legend>
+						<input class="button button--green section-form__button" type="submit" value="Отправить форму">
+						<span class="section-form__warning">
+							<span class="section-form__star">*</span> 
+							— обязательные поля
+						</span>
 					</fieldset>
 				</form>
 			</div>
 		</section>
 	</main>
-	<footer class="main-footer main-footer--indexxxx">
+	<footer class="main-footer">
 		<div class="container">
 			<div class="main-footer__wrapper">
 				<a class="main-footer__logo" href="#">
