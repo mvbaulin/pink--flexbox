@@ -1518,6 +1518,7 @@ img {
 /* SECTION-INTRO */
 .section-intro__wrapper {
   padding-top: 50px;
+  padding-bottom: 45px;
 }
 .section-intro__text {
   margin: 0;
@@ -1572,7 +1573,8 @@ img {
   opacity: 0.5;
 }
 .checkbox__input:focus + .checkbox__custom-checkbox {
-  outline: 2px solid #d22856;
+  outline: none;
+  border: 2px solid #d22856;
 }
 .checkbox__custom-checkbox {
   position: absolute;
@@ -1619,7 +1621,8 @@ img {
   opacity: 0.5;
 }
 .radio__input:focus + .radio__custom-radio {
-  outline: 2px solid #d22856;
+  outline: none;
+  border: 2px solid #d22856;
 }
 .radio__custom-radio {
   position: absolute;
@@ -1634,12 +1637,11 @@ img {
   border-radius: 50%;
 }
 /* SECTION-FORM */
+.section-form__form {
+  box-sizing: border-box;
+}
 .section-form__fieldset {
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1650,81 +1652,104 @@ img {
 .section-form__fieldset--grey {
   background-color: #f2f2f2;
 }
-.section-form__fieldset--user {
-  padding-top: 40px;
+.section-form__fieldset--user .section-form__inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 40px;
 }
-.section-form__fieldset--achievments {
+.section-form__fieldset--user .section-form__label {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.section-form__fieldset--user .section-form__label:last-child {
+  margin-bottom: 0;
+}
+.section-form__fieldset--achievments .section-form__inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
   padding-top: 120px;
   padding-bottom: 50px;
 }
-.section-form__fieldset--contacts {
+.section-form__fieldset--contacts .section-form__inner {
   padding-top: 35px;
   padding-bottom: 40px;
 }
-.section-form__fieldset--app {
-  padding-top: 115px;
+.section-form__fieldset--contacts .section-form__label {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.section-form__fieldset--contacts .section-form__label:last-child {
+  margin-bottom: 0;
+}
+.section-form__fieldset--apps .section-form__inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
   padding-bottom: 50px;
 }
-.section-form__fieldset--message {
-  padding-top: 70px;
+.section-form__fieldset--message .section-form__inner {
+  padding-top: 35px;
   padding-bottom: 50px;
+}
+.section-form__inner {
+  box-sizing: border-box;
+}
+.section-form__label-text {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  color: #d22856;
+}
+.section-form__input-text {
+  box-sizing: border-box;
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 18px;
+  color: #283645;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+.section-form__input-text:focus {
+  outline: none;
+  border: 2px solid #d22856;
 }
 .section-form__legend {
-  margin: 0 auto;
   position: absolute;
-  display: block;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  padding-right: 20px;
-  padding-left: 20px;
-  width: 90%;
   color: #d22856;
-  text-align: center;
   text-transform: uppercase;
+  text-align: center;
 }
 .section-form__legend--hidden {
   display: none;
 }
-.section-form__label {
-  margin-bottom: 22px;
-}
-.section-form__label:last-child {
-  margin-bottom: 0;
-}
-.section-form__label-text {
-  display: block;
-  color: #d22856;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  text-transform: uppercase;
-}
-.section-form__input-text {
-  box-sizing: border-box;
-  padding: 19px;
-  width: 100%;
-  border: 2px solid #e5e5e5;
-  font-size: 18px;
-  color: #283645;
-  border-radius: 2px;
-  transition: 0.5s;
-}
 .section-form__checkbox {
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 .section-form__checkbox:last-child {
   margin-bottom: 0;
 }
 .section-form__radio {
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 .section-form__radio:last-child {
   margin-bottom: 0;
 }
 .section-form__textarea {
   box-sizing: border-box;
-  padding: 20px;
+  margin-top: 65px;
+  padding: 15px 20px;
   width: 100%;
   height: 200px;
   font-size: 18px;
@@ -1732,19 +1757,27 @@ img {
   color: #283645;
   border: 2px solid #e5e5e5;
   border-radius: 2px;
-  transition: 0.5s;
   resize: none;
+}
+.section-form__textarea:focus {
+  outline: none;
+  border: 2px solid #d22856;
 }
 .section-form__button {
   margin: 0 auto;
   margin-bottom: 40px;
 }
 .section-form__warning {
-  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  text-transform: uppercase;
 }
-.section-form__star {
+.section-form__text-mark {
   color: #d22856;
+}
+.section-form__hidden-text {
+  display: none;
 }
 @media (min-width: 680px) {
   .section-form__form {
@@ -1756,98 +1789,150 @@ img {
     padding-left: 20px;
   }
   .section-form__fieldset {
-    box-sizing: border-box;
     margin-bottom: 50px;
-    padding: 0;
-    padding-top: 40px;
-    padding-right: 60px;
-    padding-bottom: 30px;
-    padding-left: 60px;
+    padding-right: 0;
+    padding-left: 0;
     border: 2px solid #e5e5e5;
+    border-radius: 2px;
   }
   .section-form__fieldset--grey {
-    background-color: transparent;
+    background-color: #ffffff;
   }
   .section-form__fieldset--user {
-    padding: 0;
     border: none;
     order: 1;
   }
-  .section-form__fieldset--achievments {
-    order: 4;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  .section-form__fieldset--user .section-form__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
   }
-  .section-form__fieldset--contacts {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    order: 3;
-  }
-  .section-form__fieldset--contacts .section-form__label {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    margin-bottom: 30px;
-  }
-  .section-form__fieldset--contacts .section-form__label:last-child {
-    margin-bottom: 0;
-  }
-  .section-form__fieldset--contacts .section-form__label-text {
-    margin: 0;
-    margin-top: 10px;
-    margin-left: 18px;
-    width: 100%;
-  }
-  .section-form__fieldset--app {
-    padding-top: 55px;
-    padding-bottom: 65px;
-    order: 2;
-  }
-  .section-form__fieldset--message {
-    padding-top: 40px;
-    padding-bottom: 50px;
-    order: 5;
-  }
-  .section-form__fieldset--send {
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 0;
-    padding: 0;
-    order: 6;
-    border: none;
-  }
-  .section-form__legend {
-    margin: 0 auto;
-    position: static;
-    display: block;
-    width: auto;
-    transform: translateX(0);
-    text-align: center;
-  }
-  .section-form__legend--hidden {
-    display: block;
-  }
-  .section-form__label {
+  .section-form__fieldset--user .section-form__label {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     align-items: center;
     margin-bottom: 50px;
   }
-  .section-form__label-text {
+  .section-form__fieldset--user .section-form__label:last-child {
+    margin-bottom: 0;
+  }
+  .section-form__fieldset--user .section-form__label .section-form__label-text {
     margin-right: 20px;
     margin-bottom: 0;
     margin-left: 0;
   }
+  .section-form__fieldset--achievments {
+    order: 4;
+  }
+  .section-form__fieldset--achievments .section-form__inner {
+    padding-top: 50px;
+    padding-bottom: 55px;
+    padding-left: 60px;
+  }
+  .section-form__fieldset--contacts {
+    order: 3;
+  }
+  .section-form__fieldset--contacts .section-form__inner {
+    padding-top: 40px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+  }
+  .section-form__fieldset--contacts .section-form__label {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding-right: 60px;
+  }
+  .section-form__fieldset--contacts .section-form__label:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #e5e5e5;
+  }
+  .section-form__fieldset--contacts .section-form__label:after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .section-form__fieldset--contacts .section-form__label--phone:after {
+    top: 21px;
+    right: 19px;
+    width: 20px;
+    height: 19px;
+    background-image: url(../img/icons/contest-phone.svg);
+  }
+  .section-form__fieldset--contacts .section-form__label--email:after {
+    top: 24px;
+    right: 21px;
+    width: 18px;
+    height: 13px;
+    background-image: url(../img/icons/contest-mail.svg);
+  }
+  .section-form__fieldset--contacts .section-form__label-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .section-form__fieldset--contacts .section-form__input-text {
+    border-radius: 2px 0px 0px 2px;
+  }
+  .section-form__fieldset--apps {
+    order: 2;
+  }
+  .section-form__fieldset--apps .section-form__inner {
+    padding-top: 50px;
+    padding-bottom: 55px;
+    padding-left: 55px;
+  }
+  .section-form__fieldset--message {
+    order: 5;
+  }
+  .section-form__fieldset--message .section-form__inner {
+    padding-top: 30px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .section-form__fieldset--send {
+    order: 6;
+    border: none;
+  }
+  .section-form__fieldset--send .section-form__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-form__legend {
+    position: static;
+    transform: translateX(0);
+    padding-right: 25px;
+    padding-left: 20px;
+  }
+  .section-form__legend--hidden {
+    display: block;
+  }
+  .section-form__input-text {
+    height: 60px;
+  }
+  .section-form__textarea {
+    margin-top: 0;
+    height: 190px;
+  }
   .section-form__button {
     margin: 0;
-    width: 300px;
-  }
-  .section-form__warning {
-    display: block;
-    width: 200px;
-  }
-  .section-form__star {
-    color: #d22856;
   }
 }
