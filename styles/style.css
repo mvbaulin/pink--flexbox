@@ -1697,7 +1697,7 @@ img {
 }
 .section-form__fieldset--message .section-form__inner {
   padding-top: 35px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
 }
 .section-form__inner {
   box-sizing: border-box;
@@ -1942,5 +1942,76 @@ img {
   }
   .section-form__button {
     margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .section-form__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .section-form__fieldset {
+    margin-bottom: 0;
+  }
+  .section-form__fieldset--user {
+    width: 48%;
+  }
+  .section-form__fieldset--user .section-form__inner {
+    justify-content: space-between;
+    padding-top: 25px;
+    height: 100%;
+  }
+  .section-form__fieldset--user .section-form__inner .section-form__label {
+    margin-bottom: 0;
+  }
+  .section-form__fieldset--achievments {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .section-form__fieldset--achievments .section-form__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    min-height: 225px;
+  }
+  .section-form__fieldset--contacts {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .section-form__fieldset--contacts .section-form__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-form__fieldset--contacts .section-form__label {
+    margin-bottom: 0;
+    width: 48%;
+  }
+  .section-form__fieldset--apps {
+    margin-bottom: 0;
+    width: 48%;
+  }
+  .section-form__fieldset--message {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .section-form__fieldset--send {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .section-form__checkbox {
+    margin-bottom: 0;
+    min-width: 20%;
+  }
+  .section-form__warning {
+    width: 500px;
+  }
+  .section-form__hidden-text {
+    display: inline;
   }
 }
