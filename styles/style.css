@@ -1467,6 +1467,7 @@ img {
   width: 130px;
   font-size: 18px;
   line-height: 18px;
+  color: #283645;
   text-decoration: none;
 }
 .main-footer__developed:after {
@@ -1550,12 +1551,6 @@ img {
 .checkbox__text {
   font-size: 18px;
 }
-.checkbox__input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
 .checkbox__input:checked + .checkbox__custom-checkbox:after {
   position: absolute;
   content: "";
@@ -1597,12 +1592,6 @@ img {
 }
 .radio__text {
   font-size: 18px;
-}
-.radio__input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 .radio__input:checked + .radio__custom-radio:after {
   position: absolute;
@@ -1711,6 +1700,9 @@ img {
 }
 .section-form__input-text {
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 15px 20px;
   width: 100%;
   font-size: 18px;
@@ -1937,6 +1929,9 @@ img {
     height: 60px;
   }
   .section-form__textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     margin-top: 0;
     height: 190px;
   }
@@ -2014,4 +2009,106 @@ img {
   .section-form__hidden-text {
     display: inline;
   }
+}
+/* PHOTO-PAGE */
+.section-gallery__post--potd {
+  position: relative;
+}
+.section-gallery__post--potd:after {
+  position: absolute;
+  content: "Панорама дня";
+  padding: 10px 15px;
+  top: 0;
+  right: 20px;
+  background-color: #d22856;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.section-gallery__post--potd .section-gallery__image-wrapper {
+  width: 100%;
+  height: auto;
+}
+.section-gallery__image-wrapper {
+  width: 280px;
+  height: 180px;
+}
+.section-gallery__picture-info {
+  padding-top: 20px;
+  padding-right: 18px;
+  padding-bottom: 25px;
+  padding-left: 18px;
+  background-color: #f2f2f2;
+}
+.section-gallery__user-name {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  font-weight: bold;
+}
+.section-gallery__post-time {
+  position: relative;
+  padding-right: 3px;
+  padding-left: 3px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(40, 54, 69, 0.5);
+  text-transform: uppercase;
+}
+.section-gallery__post-time:before,
+.section-gallery__post-time:after {
+  position: absolute;
+}
+.section-gallery__post-time:before {
+  content: "(";
+  left: 0;
+}
+.section-gallery__post-time:after {
+  content: ")";
+  right: 0;
+}
+.section-gallery__comment {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.section-gallery__like-button {
+  position: relative;
+  padding-left: 32px;
+  background-color: transparent;
+  font-size: 12px;
+  color: #d22856;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.section-gallery__like-button:before {
+  position: absolute;
+  content: "";
+  left: 5px;
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/icons/like.svg);
+  background-repeat: no-repeat;
+}
+.section-gallery__like-button:focus {
+  outline: none;
+}
+.section-gallery__like-button:hover:before {
+  background-image: url(../img/icons/like--true.svg);
+}
+.section-gallery__post-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  list-style: none;
+}
+.section-gallery__post {
+  margin-bottom: 20px;
+}
+.section-gallery__post:last-child {
+  margin-bottom: 0;
 }
