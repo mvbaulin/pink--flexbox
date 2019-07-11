@@ -1717,6 +1717,10 @@ img {
   color: #283645;
   border: 2px solid #e5e5e5;
   border-radius: 2px;
+  transition: 0.5s;
+}
+.section-form__input-text:hover {
+  border: 2px solid #283645;
 }
 .section-form__input-text:focus {
   outline: none;
@@ -1758,6 +1762,10 @@ img {
   border: 2px solid #e5e5e5;
   border-radius: 2px;
   resize: none;
+  transition: 0.5s;
+}
+.section-form__textarea:hover {
+  border: 2px solid #283645;
 }
 .section-form__textarea:focus {
   outline: none;
