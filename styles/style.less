@@ -59,7 +59,7 @@ img {
 @media (min-width: @width-desktop) {
 	.container {
 		padding: 0 10px;
-		max-width: 880px;
+		max-width: 940px;
 	}
 }
 
@@ -2490,8 +2490,10 @@ img {
 }
 
 .section-gallery__post-list {
-	margin: 0;
-	padding: 0;
+	margin: 0 auto;
+	width: 280px;
+	padding-right: 20px;
+	padding-left: 20px;
 	padding-top: 20px;
 	list-style: none;
 }
@@ -2515,6 +2517,9 @@ img {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		width: 620px;
+		padding-right: 20px;
+		padding-left: 20px;
 	}
 	
 	.section-gallery__post {
@@ -2538,7 +2543,7 @@ img {
 		flex-wrap: wrap;
 		align-content: flex-start;
 		padding-bottom: 60px;
-		min-height: 155px;
+		min-height: 170px;
 	}
 	
 	.section-gallery__user-name {
@@ -2592,6 +2597,35 @@ img {
 		height: auto;
 		&::after {
 			top: 60px;
+		}
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.section-gallery__post-list {
+		width: 940px;
+		padding-top: 55px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	
+	.section-gallery__post {
+		margin-bottom: 55px;
+	}
+	
+	.section-gallery__image-wrapper {
+		height: 400px;
+	}
+	
+	.section-gallery__potd {
+		max-width: 100%;
+	}
+	
+	.section-gallery__potd-wrapper {
+		margin: 0 auto;
+		max-width: 1200px;
+		&:after {
+			right: 130px;
 		}
 	}
 }
