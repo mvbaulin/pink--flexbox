@@ -2399,59 +2399,47 @@ img {
 
 /* PHOTO-PAGE */
 
-.section-gallery__post {
-	&--potd {
-		position: relative;
-		&:after {
-			position: absolute;
-			content: "Панорама дня";
-			padding: 10px 15px;
-			top: 0;
-			right: 20px;
-			background-color: @color-pink;
-			font-size: 12px;
-			line-height: 24px;
-			font-weight: bold;
-			color: @color-white;
-			text-transform: uppercase;
-		}
-		.section-gallery__image-wrapper {
-			width: 100%;
-			height: auto;
-		}
+.section-gallery__potd-wrapper{
+	position: relative;
+	width: 100%;
+	height: auto;
+	&:after {
+		position: absolute;
+		content: "Панорама дня";
+		padding: 10px 15px;
+		top: 0;
+		right: 20px;
+		background-color: @color-pink;
+		font-size: 12px;
+		line-height: 24px;
+		font-weight: bold;
+		color: @color-white;
+		text-transform: uppercase;
 	}
 }
 
 
-.section-gallery__image-wrapper {
-	width: 280px;
-	height: 180px;
-}
-
 .section-gallery__picture-info {
-	padding-top: 20px;
-	padding-right: 18px;
-	padding-bottom: 25px;
-	padding-left: 18px;
 	background-color: @color-grey;
+	padding-top: 18px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
 }
 
 .section-gallery__user-name {
 	margin: 0;
 	margin-bottom: 5px;
 	padding: 0;
+	line-height: 24px;
 	font-weight: bold;
 }
 
 .section-gallery__post-time {
 	position: relative;
-	padding-right: 3px;
-	padding-left: 3px;
-	font-size: 12px;
-	line-height: 24px;
+	padding-right: 5px;
+	padding-left: 5px;
 	font-weight: 300;
-	color: @color-transblue;
-	text-transform: uppercase;
 	&:before,
 	&:after {
 		position: absolute;
@@ -2474,17 +2462,18 @@ img {
 
 .section-gallery__like-button {
 	position: relative;
-	padding-left: 32px;
+	padding-left: 35px;
 	background-color: transparent;
-	font-size: 12px;
+	border: none;
 	color: @color-pink;
 	text-transform: uppercase;
-	border: none;
 	cursor: pointer;
-	&:before {
+	&::before {
 		position: absolute;
 		content: "";
-		left: 5px;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
 		width: 13px;
 		height: 12px;
 		background-image: url(../img/icons/like.svg);
@@ -2513,3 +2502,97 @@ img {
 		margin-bottom: 0;
 	}
 }
+
+.section-gallery__image-wrapper {
+	width: 280px;
+	height: 180px;
+}
+
+@media (min-width: @width-tablet) {
+	.section-gallery__post-list {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	.section-gallery__post {
+		width: 300px;
+		&:last-child {
+			margin-bottom: 20px;
+		}
+	}
+	
+	.section-gallery__image-wrapper {
+		width: 300px;
+		height: 300px;
+	}
+	
+	.section-gallery__picture-info {
+		position: relative;
+		box-sizing: border-box;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		padding-bottom: 60px;
+		min-height: 155px;
+	}
+	
+	.section-gallery__user-name {
+		margin-bottom: 0;
+		width: 100%;
+	}
+	
+	.section-gallery__comment {
+		margin-bottom: 0;
+		width: 100%;
+	}
+	
+	.section-gallery__like-button {
+		position: absolute;
+		box-sizing: border-box;
+		bottom: 25px;
+		padding-right: 15px;
+		padding-left: 0;
+		width: 248px;
+		text-align: left;
+		&:before {
+			left: auto;
+			right: 0;
+		}
+	}
+	
+	.section-gallery__potd {//POST-OF-THE-DAY
+		margin: 0 auto;
+		max-width: 660px;
+		.section-gallery__picture-info {
+			padding-bottom: 25px;
+			min-height: auto;
+		}
+		
+		.section-gallery__user-name {
+			width: 50%;
+		}
+		
+		
+		.section-gallery__like-button {
+			padding-right: 30px;
+			top: 15px;
+			right: 25px;
+			height: 25px;
+			width: auto;
+		}
+	}
+	
+	.section-gallery__potd-wrapper {
+		max-width: 660px;
+		height: auto;
+		&::after {
+			top: 60px;
+		}
+	}
+}
+
